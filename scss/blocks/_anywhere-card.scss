@@ -1,0 +1,67 @@
+.anywhere-card{
+	display: flex;
+	gap: 20px;
+	padding: 20px 30px;
+	background-color: #fff;
+	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.06);
+	border-radius: 6px;
+	transition: transform .2s ease, background-color .2s ease;
+	&:hover{
+		background-color: var(--color-accent);
+		transform: translateX(-5px);
+		.anywhere-card__img{
+			color: var(--color-accent);
+			background-color: #fff;
+		}
+
+		.anywhere-card__title, .anywhere-card__text{
+			color: #fff;
+		}
+	}
+	@include mediaTablet() {
+		padding: 12px 15px 12px 20px;
+	}
+	@include mediaMobile-sm() {
+		padding: 10px 12px 10px;
+		gap: 12px;
+	}
+}
+
+.anywhere-card__img{
+	font-family: 'linea-basic-10';
+	font-size: 24px;
+	color: #fff;
+	background-color: var(--color-accent);
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	width: 60px;
+	min-width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	@include mediaMobile-sm() {
+		font-size: 22px;
+		width: 40px;
+		min-width: 40px;
+		height: 40px;
+	}
+}
+
+.anywhere-card__title{
+	font-size: 18px;
+	font-weight: 700;
+	margin-bottom: 8px;
+	color: var(--color-black);
+	transition: color .2s ease;
+	@include mediaMobile-sm() {
+		margin-bottom: 4px;
+	}
+	
+}
+
+.anywhere-card__text{
+	transition: color .2s ease;
+
+}

@@ -1,0 +1,53 @@
+.btn-download{
+	display: flex;
+	gap: 10px;
+	align-items: center;
+
+	padding: 10px 25px;
+	border: 1px solid #fff;
+	border-radius: 3px;
+	min-width: 180px;
+	cursor: pointer;
+	transition: color .2s ease, background-color .2s ease;
+	&:hover{
+		color: var(--color-accent);
+		background-color: #fff;
+	}
+	@include mediaMobile() {
+		padding: 8px 20px;
+		min-width: 170px;
+	}
+}
+
+.btn-download__available{
+	font-size: 12px;
+	font-weight: 500;
+	@include mediaMobile() {
+		font-size: 11px;
+	}
+}
+
+.btn-download__market{
+	font-size: 17px;
+	font-weight: 700;
+	@include mediaMobile() {
+		font-size: 16px;
+	}
+}
+
+
+.btn-download__img{
+	&::after{
+		font-family: 'Font Awesome 5 Brands';
+		content: '\f3ab';
+		font-weight: 400;
+		font-size: 27px;
+		@include mediaMobile() {
+			font-size: 24px;
+		}
+	}
+	&--apple::after{
+		content: '\f179';
+	}
+	
+}

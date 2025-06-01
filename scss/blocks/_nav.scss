@@ -1,0 +1,168 @@
+.nav{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.nav-mobile {
+	@include mediaMobile {
+		height: 100vh;
+		background-color: #7c4fe0;
+		z-index: 1;
+		margin: 0 -15px;
+		flex-direction: column;
+		padding: 40px 35px;
+		justify-content: start;
+
+		.nav__right {
+			flex-direction: column;
+			align-items: center;
+		}
+
+		.nav__list {
+			margin-top: 15px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+		.nav__burger-inner {
+			background-color: transparent;
+			&::before {
+				margin-top: 10px;
+				transform: rotateZ(45deg);
+			}
+			&::after {
+				margin-bottom: 10px;
+				transform: rotateZ(-45deg);
+			}
+		}
+		.nav__search {
+			display: block;
+		}
+	}
+}
+
+.nav__logo {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+
+
+.nav__right{
+	display: flex;
+	align-items: center;
+}
+
+.nav__list{
+	display: flex;
+	@include mediaMobile() {
+		display: none;
+	}
+}
+
+.nav__link{
+	display: block;
+	color: #fff;
+	font-weight: 500;
+	padding: 10px 20px;
+
+	span{
+		position: relative;
+	}
+	span::before{
+		content: '';
+		position: absolute;
+		right: 0;
+		bottom: -2px;
+		width: 0;
+		height: 1px;
+		background-color: #fff;
+		transition: width .2s ease;
+	}
+	&:hover{
+		span::before{
+			left: 0;
+			width: 100%;
+		}
+	}
+	@include mediaTablet() {
+		font-size: 14px;
+		padding: 6px 12px;
+	}
+	@include mediaMobile() {
+		font-size: 16px;
+		padding: 6px 12px;
+	}
+}
+
+.nav__search{
+	font-family: 'Font Awesome 5 Free', serif;
+	font-weight: 900;
+	color: #fff;
+	display: flex;
+	align-items: center;
+	padding: 0 20px;
+	cursor: pointer;
+	&::before{
+		content: "\f002";
+		transition: scale .2s ease;
+
+	}
+	&:hover{
+		&::before{
+			scale: 1.3;
+		}
+	}
+	@include mediaMobile() {
+		display: none;
+	}
+}
+
+.nav__burger {
+	cursor: pointer;
+	height: 25px;
+	display: flex;
+	align-items: center;
+}
+
+.nav__burger-inner {
+	display: none;
+	width: 35px;
+	height: 4px;
+	background-color: #fff;
+	border-radius: 2px;
+	position: relative;
+	cursor: pointer;
+	transition: background .2s ease;
+	&::before {
+		content: "";
+		position: absolute;
+		top: -10px;
+		left: 0;
+		z-index: 1;
+		width: 35px;
+		height: 4px;
+		background-color: #fff;
+		border-radius: 2px;
+		margin-top: 0;
+		transition: transform .2s ease, margin-top .2s ease;
+	}
+
+	&::after {
+		content: "";
+		position: absolute;
+		bottom: -10px;
+		left: 0;
+		z-index: 1;
+		width: 35px;
+		height: 4px;
+		background-color: #fff;
+		border-radius: 2px;
+		margin-bottom: 0;
+		transition: transform .2s ease, margin-bottom .2s ease;
+	}
+	@include mediaMobile() {
+		display: block;
+	}
+}

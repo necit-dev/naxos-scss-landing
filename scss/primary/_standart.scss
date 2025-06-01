@@ -1,0 +1,35 @@
+.title{
+	font-size: 36px;
+	font-weight: 700;
+	line-height: 1.2;
+	color: var(--color-black);
+	@include mediaTablet() {
+		font-size: 28px;
+	}
+	@include mediaMobile() {
+		font-size: 24px;
+		text-align: center;
+	}
+}
+
+.text-big{
+	font-size: 18px;
+	color: var(--color-light-grey);
+	line-height: 1.75;
+	@include mediaTablet() {
+		font-size: 16px;
+	}
+	@include mediaMobile() {
+		font-size: 15px;
+		text-align: center;
+	}
+}
+
+.text{
+	font-size: 16px;
+	line-height: 1.75;
+	color: var(--color-grey);
+	@include mediaTablet() {
+		font-size: 14px;
+	}
+}

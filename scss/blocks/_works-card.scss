@@ -1,0 +1,68 @@
+.works-card{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 50px;
+	border-radius: 6px;
+	background-color: #fff;
+	box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.06);
+	transition: background-color .2s ease, transform .2s ease;
+	&:hover{
+		background-color: var(--color-accent);
+		transform: translateY(-5px);
+		.works-card__img{
+			background-color: #fff;
+			color: var(--color-accent);
+		}
+		.works-card__title{
+			color: #fff;
+		}
+		.works-card__text{
+			color: #fff;
+		}
+	}
+	@include mediaTablet() {
+		padding: 35px 20px;
+	}
+	@include mediaMobile() {
+		max-width: 350px;
+	}
+	
+}
+
+.works-card__img{
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	background-color: var(--color-accent);
+
+	font-family: 'linea-basic-10';
+	font-size: 40px;
+	color: #fff;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 25px;
+	transition: background-color .2s ease, color .2s ease;
+	&--software{
+		font-family: 'linea-software-10';
+	}
+	
+}
+
+.works-card__title{
+	font-size: 20px;
+	font-weight: 700;
+	margin-bottom: 15px;
+	transition: color .2s ease;
+}
+
+.works-card__text{
+	text-align: center;
+	transition: color .2s ease;
+	min-height: 112px;
+	@include mediaMobile() {
+		min-height: auto;
+	}
+}

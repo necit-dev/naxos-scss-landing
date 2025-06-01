@@ -1,0 +1,37 @@
+@import url("https://use.fontawesome.com/releases/v5.13.0/css/all.css");
+
+:root{
+	--color-accent: #7c4fe0;
+	--color-black: #111;
+	--color-grey: #666;
+	--color-light-grey: #999;
+}
+
+
+html{
+	font-family: 'Roboto', sans-serif;
+	line-height: 1.4;
+}
+
+body{
+	font-size: 16px;
+}
+
+.container{
+	max-width: 1350px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+.no-scroll {
+	overflow: hidden;
+}
+
+.none{
+	display: none;
+}
+
+.nonefake{
+	opacity: 0;
+	pointer-events: none;
+}

@@ -1,0 +1,25 @@
+.sponsors{
+	padding: 50px 0;
+	background-color: #fafbfe;
+	@include mediaTablet() {
+		padding: 25px 0;
+	}
+	@include mediaMobile() {
+		padding: 15px 0;
+	}
+}
+
+.sponsor{
+	display: flex;
+	justify-content: center;
+	margin: 0 auto;
+	cursor: pointer;
+	opacity: 0.7;
+}
+
+
+.sponsor img{
+	width: 100%;
+	max-width: 140px;
+}
+
